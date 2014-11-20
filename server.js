@@ -44,9 +44,10 @@ app.post('/api/send', function(req, res) { //api 1
         //     'content-type': 'application/json'
         // });
         res.end();
-        if (fields.type == "broadcast") {
+        if (fields.type == "Broadcast") {
             console.log('\nthis is a broadcast\n');
-            io.emit(fields.textarea); //for loop could provide a workaround, but..why it won't work?
+            for (var v in userDict)
+                io.emit(v, fields.textarea); //for loop could provide a workaround, but..why it won't work?
         } else {
             io.emit(fields.username, fields.textarea);
         }

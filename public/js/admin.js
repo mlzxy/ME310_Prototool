@@ -13,6 +13,12 @@ app.controller('mainCtrl', function($scope, $http) {
                 username: data[v]
             });
         }
+        var bc = [{
+            formname: "Broadcast",
+            username: "Broadcast",
+            type: "Broadcast"
+        }];
+        $scope.formList = bc.concat($scope.formList);
     });
 
     var transform = function(data) {

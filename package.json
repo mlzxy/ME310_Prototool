@@ -1,0 +1,16 @@
+{
+  "name": "ME310_prototool",
+  "version": "0.1.0",
+  "description": "build for making better prototype survey in the stanford me310 course ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Xinyu Zhang",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.2",
+    "socket.io": "^1.2.0"
+  }
+}
