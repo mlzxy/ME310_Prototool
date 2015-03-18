@@ -71,10 +71,12 @@ io.on('connection', function(socket) {
     socket.on('adduser', function(data) {
         username = data.name; //add user to Dict, and save this user name into this connection locally
         userDict[username] = username;
+        // console.log(this);
+        // console.log(socket);
         console.log('add an user');
+        console.log(socket === this);
     });
     socket.on('disconnect', function() {
         delete userDict[username]; //delete the user from dict, if we could save data locally, then it's fine
     });
-
 });
